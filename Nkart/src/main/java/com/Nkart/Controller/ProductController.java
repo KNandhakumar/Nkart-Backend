@@ -31,4 +31,10 @@ public class ProductController {
     public Product getProductById(@PathVariable Long id){
         return service.getProductById(id);
     }
+
+    // Update products
+    @PutMapping("/{id}")
+    public Product updateProduct(@PathVariable Long id, @RequestBody Product product){
+        return service.updateProduct(id,product);
+    }
 }
